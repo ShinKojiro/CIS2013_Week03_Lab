@@ -11,7 +11,7 @@ int main(){
     cout << "Our C++ Calculator\n";
 
     while(again == 'Y' || again == 'y'){
-        cout << "(A)dd or (S)ubtract? ";
+        cout << "(A)dd, (S)ubtract, (M)ultiply, or (D)ivide? ";
         cin >> op;
         if('A' == op || 'a' == op){
             cout << "Enter your first number: ";
@@ -30,6 +30,27 @@ int main(){
 
             cout << endl << num1 << " - " 
             << num2 << " = " << (num1 - num2) << endl;
+        }
+        else if('M' == op || 'm' == op){
+            cout << "Enter your first number: ";
+            cin >> num1;
+            cout << "Enter your second number: ";
+            cin >> num2;
+
+            cout << endl << num1 << " x " 
+            << num2 << " = " << (num1 * num2) << endl;
+        }
+        else if('D' == op || 'd' == op){
+            cout << "Enter your first number: ";
+            cin >> num1;
+            cout << "Enter your second number: ";
+            cin >> num2;
+            if(num2 == 0){
+                cout << endl << "You cannot divide by zero !!!!" << endl;
+            }else{
+                cout << endl << num1 << " / " 
+                << num2 << " = " << (num1 / num2) << endl;
+            }
         }
         else{
             cout << op << " is not a valid option..." << endl;
