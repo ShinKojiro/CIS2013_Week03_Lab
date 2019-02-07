@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 using namespace std;
 
 int num1 = 0;
@@ -85,9 +84,9 @@ int main(){
             cout << op << " is not a valid option..." << endl;
         }*/
         
-
         cout << "\nDo you want to use Calculator again (Y/n)? ";
         cin >> again;
+        
     }
 
     return 0;
