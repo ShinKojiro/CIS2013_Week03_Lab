@@ -13,14 +13,28 @@ int main(){
     while(again == 'Y' || again == 'y'){
         cout << "(A)dd or (S)ubtract? ";
         cin >> op;
+        if('A' == op || 'a' == op){
+            cout << "Enter your first number: ";
+            cin >> num1;
+            cout << "Enter your second number: ";
+            cin >> num2;
 
-        cout << "Enter your first number: ";
-        cin >> num1;
-        cout << "Enter your second number: ";
-        cin >> num2;
+            cout << endl << num1 << " + " 
+            << num2 << " = " << (num1 + num2) << endl;
+        }
+        else if('S' == op || 's' == op){
+            cout << "Enter your first number: ";
+            cin >> num1;
+            cout << "Enter your second number: ";
+            cin >> num2;
 
-        cout << endl << num1 << " + " 
-        << num2 << " = " << (num1 + num2) << endl;
+            cout << endl << num1 << " - " 
+            << num2 << " = " << (num1 - num2) << endl;
+        }
+        else{
+            cout << op << " is not a valid option..." << endl;
+        }
+        
 
         cout << "\nDo you want to use Calculator again (Y/n)? ";
         cin >> again;
