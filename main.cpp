@@ -1,12 +1,22 @@
 #include <iostream>
 
+
 using namespace std;
+
+int num1 = 0;
+int num2 = 0;
+
+void printOptions(){
+    cout << "Enter your first number: ";
+    cin >> num1;
+    cout << "Enter your second number: ";
+    cin >> num2;
+}
 
 int main(){
     char op ='A';
     char again = 'Y';
-    int num1 = 0;
-    int num2 = 0;
+    
 
     cout << "Our C++ Calculator\n";
 
@@ -14,37 +24,22 @@ int main(){
         cout << "(A)dd, (S)ubtract, (M)ultiply, or (D)ivide? ";
         cin >> op;
         if('A' == op || 'a' == op){
-            cout << "Enter your first number: ";
-            cin >> num1;
-            cout << "Enter your second number: ";
-            cin >> num2;
-
+            printOptions();
             cout << endl << num1 << " + " 
             << num2 << " = " << (num1 + num2) << endl;
         }
         else if('S' == op || 's' == op){
-            cout << "Enter your first number: ";
-            cin >> num1;
-            cout << "Enter your second number: ";
-            cin >> num2;
-
+            printOptions();
             cout << endl << num1 << " - " 
             << num2 << " = " << (num1 - num2) << endl;
         }
         else if('M' == op || 'm' == op){
-            cout << "Enter your first number: ";
-            cin >> num1;
-            cout << "Enter your second number: ";
-            cin >> num2;
-
+            printOptions();
             cout << endl << num1 << " x " 
             << num2 << " = " << (num1 * num2) << endl;
         }
         else if('D' == op || 'd' == op){
-            cout << "Enter your first number: ";
-            cin >> num1;
-            cout << "Enter your second number: ";
-            cin >> num2;
+            printOptions();
             if(num2 == 0){
                 cout << endl << "You cannot divide by zero !!!!" << endl;
             }else{
